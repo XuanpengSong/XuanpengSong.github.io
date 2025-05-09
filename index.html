@@ -3,67 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Webpage</title>
+    <title>Personal Webpage</title>
     <style>
+        /* General Reset */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
         }
+
+        /* Header Section */
         header {
-            background-color: #0078D7;
+            background: #0078D7;
             color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 1em 0;
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        /* Navigation */
         nav {
             background: #333;
             color: white;
             text-align: center;
-            padding: 0.5em 0;
+            padding: 10px 0;
         }
+
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            font-size: 1.1em;
         }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Sections */
         section {
-            padding: 2em;
+            padding: 50px 20px;
             text-align: center;
         }
+
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        /* Portfolio Grid */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .portfolio-item {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
         footer {
             background: #222;
             color: white;
             text-align: center;
-            padding: 1em 0;
-            margin-top: 2em;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            section {
+                padding: 30px 10px;
+            }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Welcome to My Personal Website</h1>
+        <h1>Welcome to My Website</h1>
+        <p>Hi! I'm [Your Name]. A [Your Profession/Title].</p>
     </header>
+
+    <!-- Navigation -->
     <nav>
         <a href="#about">About Me</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#resume">Resume</a>
         <a href="#contact">Contact</a>
     </nav>
+
+    <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Hello! I'm [Your Name]. Welcome to my personal webpage.</p>
+        <p>Hello! I'm a [Your Profession/Title]. I specialize in [Your Skills/Expertise]. Welcome to my personal webpage!</p>
     </section>
+
+    <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <p>Here are some of my projects.</p>
+        <p>Here are a few of my recent projects:</p>
+        <div class="portfolio">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Description of Project 3.</p>
+            </div>
+        </div>
     </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>You can download my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>Email me at: your-email@example.com</p>
+        <p>Feel free to reach out to me:</p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p>Phone: +1 (123) 456-7890</p>
     </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
